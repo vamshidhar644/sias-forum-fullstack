@@ -1,0 +1,44 @@
+.ProjectDetails-Container{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.ProjectDetails-Container table{
+    width: 90%;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color: #2596be;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    cursor: pointer;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+.ProjectInfo-Header{
+    font-size: 20px;    
+    border-top: 1px solid #2596be;
+    word-wrap: none;
+    padding-top: 0;
+    margin-top: 50px;
+    width: 15%;
+    vertical-align: text-bottom;
+    font-weight: 600;
+}
+
+.ProjectInfo-Content{
+    border-top: 1px solid #2596be;
+    padding: 20px;
+    padding-left: 100px;
+}

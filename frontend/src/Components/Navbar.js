@@ -1,34 +1,33 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useLogout } from '../hooks/useLogout';
 import { useAuthContext } from '../hooks/useAuthContext';
 import LoginForm from './LoginForm';
 import '../Styles/Navbar.css';
+import NavigationBar from '../pages/NavigationBar';
 
 const Navbar = () => {
   const { logout } = useLogout();
   const { user } = useAuthContext();
-
+  
   const handleClick = () => {
     logout();
   };
   return (
-    <header>
-      <div className="Navbar-container">
-        <Link to="/" className="Brand-Logo" style={{ textDecoration: 'none' }}>
-          <h1>SIAS</h1>
-        </Link>
-        {user && (
-          <div className="logInOut">
-            <span>{user.email} </span>
-            <div className="loginoutbuttons" onClick={handleClick}>
-              Logout
+      <div className='MainNav-Container'>
+        
+        <div className="Navbar-container">
+          {user && (
+            <div className="logOutSection">
+              <span>{user.user.firstName} </span>
+              <div className="loginoutbuttons" onClick={handleClick}>
+                Logout
+              </div>
             </div>
-          </div>
-        )}
-        {!user && <LoginForm />}
+          )}
+          {!user && <LoginForm />}
+        </div>
+        <NavigationBar/>
       </div>
-    </header>
   );
 };
 

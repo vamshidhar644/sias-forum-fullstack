@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom'
 import { AiOutlineLogin, AiOutlineUserAdd } from 'react-icons/ai';
 import '../Styles/Navbar.css'
 
@@ -14,6 +15,7 @@ const LoginForm = () => {
       e.preventDefault();
     
       await login(email, password)
+
     }
     
   return (
@@ -27,9 +29,11 @@ const LoginForm = () => {
             <a href="">Forgot password?</a>
         </Form.Group>
 
-        <Form.Group className="logInOut">
-            <div className="loginoutbuttons" onClick={handleSubmit}>Login <AiOutlineLogin /></div>    
-            <div className="loginoutbuttons" >Become a member <AiOutlineUserAdd /></div>        
+        <Form.Group className="logInSection">
+            <div className="loginoutbuttons" onClick={handleSubmit} disabled={isLoading}>Login <AiOutlineLogin /></div>    
+            <Link className="loginoutbuttons" to="/signup"  style={{ textDecoration: 'none' }}>
+                Become a member <AiOutlineUserAdd />
+            </Link>
         </Form.Group>
         
     </Form>

@@ -1,23 +1,152 @@
 /* google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
+.Navbar-Container{
+    display: flex;
+}
+
+.Navbar-Container h1{
+    color: #2596be;
+    font-weight: 700;
+    cursor: pointer;
+    /* font-size: 50px; */
+    padding-left: 50px;
+    width: fit-content;
+}
+.navbar{
+    width: 100%;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+ul li {
+    display: inline-block;
+    position: relative;
+    line-height: 21px;
+    padding-top: 5px;
+    padding-right: 5px;
+    text-align: left;
+}
+ul li a {
+    display: block;
+    /* min-width: none; */
+    padding: 8px 25px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    width: 100%;
+}
+ul li a:hover {
+    background: #2596be;
+    cursor: pointer;
+}
+ul li ul.dropdown {
+    min-width: fit-content; /* Set width of the dropdown */
+    background: #f2f2f2;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    padding: 0;
+}
+ul li:hover ul.dropdown {
+    display: block; /* Display the dropdown */
+}
+ul li ul.dropdown li {
+    display: block;
+}
+
+.btns{
+    display: flex;
+    gap: 10px;
+}
+
+.button{
+    background-color: #0e7ea7;
+    border: none;
+    height: fit-content;
+    padding: 3px;
+
+}
+.button:hover{
+    background-color: transparent;
+    color: #000;
+}
+
+.Nav-head{
+    background-color: #2596be;
+    display: flex;
+    padding: 5px;
+    justify-content: flex-end;
+    height: fit-content;
+}
+
+.Password-Container a{
+    text-decoration: none;
+    color: white;
+    font-size: small;
+    font-family: inherit;
+}
+
+.Password-Container a:hover{
+    color: #000;
+}
+
+.Nav-head form input{
+    padding: 0;
+    border-radius: 3px;
+    height: 30px;
+    font-size: 15px;
+    padding-left: 5px;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.me-2{
+    width: fit-content;
+}
+
+.LoginContainer{
+    display: flex;
+    width: 100%;
+}
+
+.login-buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.logged-in{
+    background-color: transparent;
+}
 
 .Navbar-container{
     display: flex;
     background-color: #2596be;
     padding: 10px;
+    height: 70px;
     justify-content: space-between;
 }
 
 .Brand-Logo h1{
     color: black;
-    
-    margin: 0;
+    text-align: center;
+    text-align: center;
+    padding: 15px;
 }
 
 .Login-Form{
     display: flex;
     gap: 10px;
+    padding: 5px;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 .Password-Container{
@@ -25,10 +154,18 @@
     flex-direction: column;
 }
 
-.logInOut{
+.logInSection{
     display: flex;
     gap: 10px;
-    padding: 2px;
+    justify-content: space-around;
+}
+
+.logOutSection{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
 }
 
 .loginoutbuttons{
@@ -36,10 +173,14 @@
     padding: 5px;
     justify-content: center;
     align-items: center;
-    border-radius: 5px ;
+    border-radius: 2px ;
     cursor: pointer;
-    background-color: aliceblue;
+    color: black;
     height: fit-content;
+}
+
+.loginoutbuttons:hover{
+   color: #fff;
 }
 
 .Password-Area{
@@ -65,7 +206,19 @@
 
 .loginformInput{
     padding: 5px;
-    border: 2px solid transparent;
     border-radius: 4px;
     box-sizing: border-box;
+    font-size: 13px;
+}
+
+
+.navigation-container{
+    display: flex;
+}
+
+
+@media only screen and (max-width: 438px) {
+    .Navbar-container{
+        flex-direction: column;
+    }
 }

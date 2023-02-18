@@ -1,0 +1,12 @@
+.Banner-Container{    
+    background-color: #2596be;
+    height: 70vh;
+}
+
+.Banner-Container h3 p{
+    color: black;
+}
+
+.Carousel-item{
+    padding: 50px;
+}

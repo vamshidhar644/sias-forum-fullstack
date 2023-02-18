@@ -1,0 +1,103 @@
+
+.container-title{
+    background-color: #2596be;
+    /* height: 150px; */
+    width: 100%;
+    padding: 50px;
+}
+
+.container-title h1{
+    font-size: 300%;
+}
+
+.Home-Section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.Section-Container{
+    width: 70%;
+    text-align: center;
+}
+
+.Project-Section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.Project-Title h5{
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.Project-Title h5:hover{
+    text-decoration: underline;
+}
+
+.ProjectLink-Card{
+    width: 30%;
+}
+
+.Project-Card{
+    border-radius: 0;
+    border: none;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+
+.ProjectLink-Card:hover{
+    box-shadow: 0px 0px 7px 4px rgba(73, 70, 67, 0.26);
+}
+
+.Apply-Button{
+    background-color: transparent;
+    border-color: black;
+}
+
+.Cards-Container a{
+    text-decoration: none;
+}
+
+.Project-Title h5{
+    text-align: left;
+    color: #2596be;
+}
+
+.ProjectCard-Footer{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ProjectCard-Footer h5{
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.ProjectCard-Footer h5:hover{
+    color: #2596be;
+}
+
+.Cards-Container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 50px;
+}
+
+.Project-Image{
+    height: 200px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.Project-Image img{
+    height: 100%;
+    width: 100%;
+}
