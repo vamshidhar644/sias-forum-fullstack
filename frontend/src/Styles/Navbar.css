@@ -162,10 +162,20 @@ ul li ul.dropdown li {
 
 .logOutSection{
     display: flex;
+    align-items: center;
     width: 100%;
     align-items: center;
     gap: 10px;
     justify-content: flex-end;
+}
+
+.logOutSection p{
+    font-weight: 500;
+    margin: 0;
+}
+
+.logOutSection p span{
+    color: bisque;
 }
 
 .loginoutbuttons{

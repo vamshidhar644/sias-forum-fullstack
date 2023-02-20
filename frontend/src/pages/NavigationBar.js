@@ -1,9 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { IoPerson } from 'react-icons/io5'
+import { useAuthContext } from '../hooks/useAuthContext';
 import '../Styles/Navbar.css';
 
 const NavigationBar = () => {
+  const { user } = useAuthContext();
   return (
     <div className="navigation-container">
         <div className='Brand-Logo'>
@@ -60,9 +62,13 @@ const NavigationBar = () => {
               <li className="nav-item">
                 <NavLink to="/events">Events</NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink>Members</NavLink>
-              </li>
+              {
+                user && (
+                  <li className="nav-item">
+                    <NavLink>Members</NavLink>
+                  </li>
+                )
+              }
             </ul>
             </div>
         </div>

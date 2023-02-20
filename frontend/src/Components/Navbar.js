@@ -9,6 +9,7 @@ const Navbar = () => {
   const { logout } = useLogout();
   const { user } = useAuthContext();
   
+  // console.log(user)
   const handleClick = () => {
     logout();
   };
@@ -18,7 +19,7 @@ const Navbar = () => {
         <div className="Navbar-container">
           {user && (
             <div className="logOutSection">
-              <span>{user.user.firstName} </span>
+              <p>Hello! <span className='userFirstname'>{user.firstName} </span></p>
               <div className="loginoutbuttons" onClick={handleClick}>
                 Logout
               </div>
