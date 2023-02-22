@@ -3,7 +3,11 @@
 
 /* layout */
 :root {
+  --primary-color: #2596be;
+  --secondary-color: #0e7ea7;
   
+  --hover-text: #030D11;
+  --main-text: #052B39;
 }
 body {
   background: #f1f1f1;

@@ -1,5 +1,5 @@
 .Banner-Container{    
-    background-color: #2596be;
+    background-color: var(--primary-color);
     height: 70vh;
 }
 

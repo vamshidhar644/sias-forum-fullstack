@@ -18,7 +18,7 @@ function ProjectDetails() {
   
   const [SignupShow, setSignupShow] = React.useState(false);
 
-  console.log(location.state);
+  // console.log(location.state);
   return (
     <>
       <div>
@@ -27,6 +27,8 @@ function ProjectDetails() {
         </div>
         <div className="ProjectDetails-Container">
         <table>
+          <thead></thead>
+          <tbody>
           <tr>
             <td className='ProjectInfo-Header'>Title</td>
             <td className='ProjectInfo-Content'><h2>{Project_Title}</h2></td>
@@ -70,10 +72,12 @@ function ProjectDetails() {
             <td className='ProjectInfo-Header'>Contact us</td>
             <td className='ProjectInfo-Content'>{Project_Contact}</td>
           </tr>
+          </tbody>
+          <tfoot></tfoot>
         </table>
       </div>
     <div className="float" onClick={() => setSignupShow(true)}>
-      <div class="fa fa-plus my-float">Apply</div>
+      <div className="fa fa-plus my-float">Apply</div>
     </div>
     {/* <Signup show={SignupShow} onHide={() => setSignupShow(false)} /> */}
   </div>

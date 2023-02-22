@@ -1,0 +1,81 @@
+.Cards-Container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 50px;
+}
+
+.ProjectLink-Card{
+    /* width: 30%; */
+    max-width: 350px;
+}
+
+.para-container {
+    max-width: 80ch;
+    text-align: left;
+    color: var(--primary-color);
+}
+  
+.para-container p {
+overflow: hidden;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+font-weight: 400;
+-webkit-box-orient: vertical;
+}
+
+.Project-Card{
+    border-radius: 0;
+    border: none;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+
+.ProjectLink-Card:hover{
+    box-shadow: 0px 0px 17px 6px rgb(165, 163, 163);;
+}
+
+.Apply-Button{
+    background-color: transparent;
+    border-color: black;
+}
+
+.Cards-Container a{
+    text-decoration: none;
+}
+
+.Project-Title h5{
+    text-align: left;
+    color: var(--secondary-color);
+}
+
+.ProjectCard-Footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.ProjectCard-Footer h5{
+    font-size: 15px;
+    cursor: pointer;
+    text-align: left;
+    color: var(--primary-color);
+}
+
+.ProjectCard-Footer h5:hover{
+    color: var(--secondary-color);
+}
+
+
+.Project-Image{
+    height: 200px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.Project-Image img{
+    height: 100%;
+    width: 100%;
+}

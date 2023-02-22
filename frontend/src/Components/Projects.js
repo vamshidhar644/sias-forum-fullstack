@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import sanityClient from '../client';
 import ProjectCard from './ProjectCard';
+import '../Styles/Project.css'
 
 const Projects = () => {
   const [ProjectData, setProjectData] = useState([]);
@@ -15,18 +16,18 @@ const Projects = () => {
   });
   
   return (
-    <>
+    <div className='Project-Container'>
       <div className="Project-Section">        
           <div className="container-title">
             <h1 className="Aboutus-title">Projects</h1>
           </div>    
           <div className="Cards-Container">
           {ProjectData.map((projectdata) => (
-            <ProjectCard key={projectdata.name} projectdata={projectdata}/>
+            <ProjectCard key={projectdata.title} projectdata={projectdata}/>
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

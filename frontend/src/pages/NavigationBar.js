@@ -1,52 +1,53 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import { IoPerson } from 'react-icons/io5'
-import { useAuthContext } from '../hooks/useAuthContext';
+// import { useAuthContext } from '../hooks/useAuthContext';
 import '../Styles/Navbar.css';
 
 const NavigationBar = () => {
-  const { user } = useAuthContext();
+  // const { user } = useAuthContext();
   return (
     <div className="navigation-container">
-        <div className='Brand-Logo'>
-            <h1>SIAS</h1>
-        </div>
+        {/* <Navigation/> */}
+        
         <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
-            {/* <a href="#" className="navbar-brand">Brand</a> */}
             <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span className="navbar-toggler-icon"></span>
             </button>
+            <div className='Brand-Logo'>
+              <h1>SIAS</h1>
+            </div>
             <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink to="/">Home ▾</NavLink>
-                <ul className="dropdown">
+                <NavLink to='/' className="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true">
+                    Home
+                </NavLink>
+                <ul className="dropdown-menu dropdown" aria-labelledby="navbarDropdown">
                   <li>
                     <NavLink to="/aboutus">About us</NavLink>
                   </li>
                   <li>
-                    <NavLink>Mission</NavLink>
+                    <NavLink to='/mission'>Mission</NavLink>
                   </li>
                   <li>
-                    <NavLink>Vision</NavLink>
+                    <NavLink to='/vision'>Vision</NavLink>
                   </li>
                 </ul>
               </li>
-              {/* <li className="nav-item">
-                        <a href="#">Organization</a>
-                    </li> */}
               <li className="nav-item">
-                <NavLink to="/membershipBen">Membership ▾</NavLink>
-                <ul className="dropdown">
+                <NavLink to='/membershipBen' className="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                    Membership
+                </NavLink>
+                <ul className="dropdown-menu dropdown" aria-labelledby="navbarDropdown">
                   <li>
-                    <NavLink to="/membershipBen">Membership Benefits</NavLink>
+                    <NavLink to="/membershipBen">Benefits</NavLink>
                   </li>
                   <li>
                     <NavLink to="/chapters">Chapters/MoU</NavLink>
                   </li>
                   <li>
-                    <NavLink>Become a member</NavLink>
+                    <NavLink to='/becomeMember'>Become a member</NavLink>
                   </li>
                 </ul>
               </li>
@@ -62,13 +63,13 @@ const NavigationBar = () => {
               <li className="nav-item">
                 <NavLink to="/events">Events</NavLink>
               </li>
-              {
-                user && (
+              {/* {
+                user && ( */}
                   <li className="nav-item">
-                    <NavLink>Members</NavLink>
+                    <NavLink to='/members'>Members</NavLink>
                   </li>
-                )
-              }
+                {/* )
+              } */}
             </ul>
             </div>
         </div>

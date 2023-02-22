@@ -14,7 +14,7 @@
 	height:60px;
 	bottom:40px;
 	right:40px;
-	background-color: #2596be;
+	background-color: var(--primary-color);
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
@@ -28,7 +28,7 @@
 
 .ProjectInfo-Header{
     font-size: 20px;    
-    border-top: 1px solid #2596be;
+    border-top: 1px solid var(--primary-color);
     word-wrap: none;
     padding-top: 0;
     margin-top: 50px;
@@ -38,7 +38,7 @@
 }
 
 .ProjectInfo-Content{
-    border-top: 1px solid #2596be;
+    border-top: 1px solid var(--primary-color);
     padding: 20px;
     padding-left: 100px;
 }
