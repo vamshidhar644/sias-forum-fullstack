@@ -1,15 +1,14 @@
 import React from 'react';
 import { useLogout } from '../hooks/useLogout';
 import { useAuthContext } from '../hooks/useAuthContext';
-import LoginForm from './LoginForm';
+import LoginSection from './LoginSection';
 import '../Styles/Navbar.css';
-import NavigationBar from '../pages/NavigationBar';
+import NavigationBar from './NavigationBar';
 
 const Navbar = () => {
   const { logout } = useLogout();
   const { user } = useAuthContext();
   
-  // console.log(user)
   const handleClick = () => {
     logout();
   };
@@ -25,7 +24,7 @@ const Navbar = () => {
               </div>
             </div>
           )}
-          {!user && <LoginForm />}
+          {!user && <LoginSection />}
         </div>
         <NavigationBar/>
       </div>

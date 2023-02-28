@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import sanityClient from '../client';
-import '../Styles/Home.css';
+import sanityClient from '../../client';
+import '../../Styles/Home.css';
 
 const Aboutus = () => {
   const [HomeData, setHomeData] = useState([]);
@@ -14,9 +14,9 @@ const Aboutus = () => {
 
   return (
     <div className="Home-Section">
-    <div className="container-title">
-      <h1 className="Aboutus-title">About us</h1>
-    </div>      
+      <div className="container-title">
+        <h1 className="Aboutus-title">About us</h1>
+      </div>
       {HomeData.map((homedata) => (
         <div className="Section-Container">
           <p>{homedata.info}</p>

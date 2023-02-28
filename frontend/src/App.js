@@ -1,19 +1,21 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthContext } from './hooks/useAuthContext';
-import Navbar from './Components/Navbar';
-import Home from './pages/Home';
-import Signup from './Components/Signup';
+
+import Navbar from './pages/Navbar';
+import Signup from './pages/Signup';
 
 import React, { useState } from 'react';
-import Aboutus from './Components/Aboutus';
-import MembershipBenefits from './Components/MembershipBenefits';
-import Chapters from './Components/Chapters';
-import Projects from './Components/Projects';
-import Services from './Components/Services';
-import Events from './Components/Events';
-import ProjectDetails from './Components/ProjectDetails';
-import Banner from './Components/Banner'
-import Courses from './Components/Courses';
+
+import Aboutus from './Components/HomeComponents/Aboutus';
+import MembershipBenefits from './Components/HomeComponents/MembershipBenefits';
+import Chapters from './Components/HomeComponents/Chapters';
+import Services from './Components/HomeComponents/Services';
+import Events from './Components/HomeComponents/Events';
+import Banner from './Components/HomeComponents/Banner';
+import Courses from './Components/HomeComponents/Courses';
+
+import Projects from './Components/ProjectComponents/Projects';
+import ProjectDetails from './Components/ProjectComponents/ProjectDetails';
 
 function App() {
   const { user } = useAuthContext();
@@ -24,8 +26,11 @@ function App() {
         <div className="pages">
           <Routes>
             <Route path="*" element={<Banner />} />
-            <Route path="/signup" element={!user ? <Signup /> : <Navigate to="/" />} />
-            
+            <Route
+              path="/signup"
+              element={!user ? <Signup /> : <Navigate to="/" />}
+            />
+
             <Route path="/aboutus" element={<Aboutus />} />
             <Route path="/membershipBen" element={<MembershipBenefits />} />
             <Route path="/chapters" element={<Chapters />} />

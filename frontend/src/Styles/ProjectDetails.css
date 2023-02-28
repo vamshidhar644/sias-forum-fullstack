@@ -1,7 +1,20 @@
 .ProjectDetails-Container{
-    padding: 50px;
+    /* padding: 50px; */
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.ProjectDetails{
+    display: flex;
+    /* padding-left: 50px; */
+    margin-top: 10px;
+}
+
+.ProjectDetails .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ProjectDetails-Container table{
@@ -42,3 +55,101 @@
     padding: 20px;
     padding-left: 100px;
 }
+
+
+ /* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  height: 100%;
+  overflow: auto;
+  cursor: default;
+}
+
+/* Sidebar links */
+.sidebar div {
+  width: 100%;
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.content-section{
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  padding-left: 50px;
+}
+
+/* Active/current link */
+.sidebar div.active {
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 5px;
+}
+
+/* Links on mouse-over */
+.sidebar div:hover:not(.active) {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+.content {
+  width: 100%;
+  padding: 50px;
+}
+
+.content div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--secondary-color);
+}
+
+.content p{
+  padding: 20px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    /* position: relative; */
+  }
+  .sidebar div {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 453px) {
+  .sidebar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .sidebar div {
+    text-align: center;
+    float: none;
+    width: fit-content;
+    height: fit-content;
+  }
+  .content-section{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    padding: 0px;
+  }
+
+  .container-title{
+    padding: 10px;
+  }
+} 

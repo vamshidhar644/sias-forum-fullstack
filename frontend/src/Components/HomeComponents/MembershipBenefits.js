@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import sanityClient from '../client';
-import '../Styles/Home.css';
+import sanityClient from '../../client';
+import '../../Styles/Home.css';
 
-const Aboutus = () => {
+const MenbershipBenefits = () => {
   const [HomeData, setHomeData] = useState([]);
 
   useEffect(() => {
     sanityClient
-      .fetch(`*[_type == "chapters"] {name, info}`)
+      .fetch(`*[_type == "membershipben"] {name, info}`)
       .then((HomeData) => setHomeData(HomeData))
       .catch(console.error);
   });
   return (
     <div className="Home-Section">
-    <div className="container-title">
-      <h1 className="Aboutus-title">
-        Chapters | MoU
-      </h1>
-    </div>    
+      <div className="container-title">
+        <h1 className="Aboutus-title">Benefits</h1>
+      </div>
       {HomeData.map((homedata) => (
         <div className="Section-Container">
+          <h4>{homedata.name}</h4>
           <p>{homedata.info}</p>
         </div>
       ))}
@@ -27,4 +26,4 @@ const Aboutus = () => {
   );
 };
 
-export default Aboutus;
+export default MenbershipBenefits;
