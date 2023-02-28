@@ -5,7 +5,11 @@ function Banner() {
     <Carousel className="Banner-Container">
       <Carousel.Item interval={6000} className="Carousel-item">
         <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sapiente consectetur cum laborum optio vitae officia eveniet, totam dicta! Quasi saepe dicta numquam. Dolorum et dignissimos fugit maxime, voluptates fuga.
+          </p>
+        </p>
       </Carousel.Item>
       <Carousel.Item interval={6000} className="Carousel-item">
         <h3>Second slide label</h3>
